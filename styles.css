@@ -531,6 +531,7 @@ img {
 }
 
 .button {
+  position: relative;
   display: flex;
   background-color: var(--first-color);
   color: #fff;
@@ -542,6 +543,20 @@ img {
   border:none;
   gap: 0.5rem;
   align-items: center;
+}
+
+#download-btn svg {
+  position: absolute;
+  right: 10px;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #fff; /* Match text color */
+  animation: bounce 1s infinite; /* Apply bounce animation */
+  transition: transform 0.3s ease;
+}
+
+#download-btn .button-text {
+  margin-right: 20px;
 }
 
 .button:hover {
@@ -1170,3 +1185,6 @@ img {
     transform: translateY(-5px);
   }
 }
+
+
+
