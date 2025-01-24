@@ -338,3 +338,32 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 });
+
+const downloadBtn = document.getElementById("download-btn");
+const tickAnimation = document.getElementById("tick-animation");
+
+downloadBtn.addEventListener("click", () => {
+  // Trigger file download
+  const filePath = "assets/m2e.pdf"; // Replace with your actual file path
+  const anchor = document.createElement("a");
+  anchor.href = filePath;
+  anchor.download = "myfile.pdf";
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+
+  // Make the button invisible while keeping its space
+  downloadBtn.classList.add("hidden");
+
+  // Show the Lottie animation
+  tickAnimation.style.display = "block";
+
+  // Trigger Lottie animation
+  lottie.loadAnimation({
+    container: tickAnimation, // Element to render the animation
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "tick.json", // Replace with your animation JSON file path
+  });
+});

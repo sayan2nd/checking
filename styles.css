@@ -534,11 +534,12 @@ img {
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
-  padding: 0.75rem 2.5rem;
+  padding: 1rem 3rem;
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
   transition: 0.3s ease-in-out; /* Smooth transition for hover effects */
   text-align: center;
+  border:none;
 }
 
 .button:hover {
@@ -1121,4 +1122,32 @@ img {
 
 .checkmark-icon {
   animation: zoomEffect 0.6s infinite;
+}
+
+
+
+
+
+
+#tick-animation {
+ position: absolute;
+  top: 250px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#download-btn.hidden {
+  opacity: 0; /* Make the button invisible */
+  pointer-events: none; /* Disable interaction */
+}
+
+/* For smaller screens (e.g., phones) */
+@media screen and (max-width: 576px) {
+  #tick-animation {
+    width: 100px; /* Reduce size for smaller screens */
+    height: 100px;
+    top: 150px;
+    align-self: center; /* Center the animation horizontally */
+  }
 }
