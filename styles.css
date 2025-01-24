@@ -531,7 +531,7 @@ img {
 }
 
 .button {
-  display: inline-block;
+  display: flex;
   background-color: var(--first-color);
   color: #fff;
   padding: 1rem 3rem;
@@ -540,6 +540,8 @@ img {
   transition: 0.3s ease-in-out; /* Smooth transition for hover effects */
   text-align: center;
   border:none;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .button:hover {
@@ -1149,5 +1151,22 @@ img {
     height: 100px;
     top: 150px;
     align-self: center; /* Center the animation horizontally */
+  }
+}
+
+#download-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #fff; /* Match text color */
+  animation: bounce 1s infinite; /* Apply bounce animation */
+  transition: transform 0.3s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
   }
 }
